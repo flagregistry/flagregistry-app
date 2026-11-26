@@ -1,1 +1,24 @@
-{}
+{
+    "app": {
+        "account": {
+            "menu": "Account menu",
+            "profile": "Edit profile",
+            "email": "Change email",
+            "logout": "Sign out",
+            "failed": "Unable to open the requested account action. Please try again."
+        },
+        "errors": {
+            "title": "404 - Page not found",
+            "description": "The resource may have been moved or deleted.",
+            "back": "Back to home"
+        },
+        "home": {
+            "title": "Hi, {{name}} 👋"
+        },
+        "menu": {
+            "billing": "Billing",
+            "overview": "Overview"
+        },
+        "title": "FlagRegistry"
+    }
+}

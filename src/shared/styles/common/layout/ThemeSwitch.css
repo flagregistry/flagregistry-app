@@ -1,0 +1,104 @@
+.theme-switch {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-items: center;
+    box-sizing: border-box;
+    height: 2.5rem;
+    width: 5.25rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    border-color: var(--border);
+    background-color: color-mix(in srgb, var(--muted) 70%, transparent);
+    padding: 3px;
+    transition:
+        background-color 150ms,
+        color 150ms;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .theme-switch:hover {
+        background-color: var(--muted);
+    }
+}
+
+.theme-switch:focus-visible {
+    outline: 2px solid var(--color-neutral-600);
+    outline-offset: 2px;
+}
+
+.dark .theme-switch:focus-visible {
+    outline-color: var(--color-neutral-300);
+}
+
+.theme-switch-sun {
+    pointer-events: none;
+    z-index: 10;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    color: var(--muted-foreground);
+    transition:
+        background-color 150ms,
+        color 150ms;
+}
+
+.theme-switch-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.theme-switch-moon {
+    pointer-events: none;
+    z-index: 10;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    color: var(--muted-foreground);
+    transition:
+        background-color 150ms,
+        color 150ms;
+}
+
+.theme-switch-indicator {
+    pointer-events: none;
+    grid-row-start: 1;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 1px var(--indicator-border);
+    --indicator-border: var(--color-neutral-200);
+}
+
+.dark .theme-switch-indicator {
+    background-color: var(--color-neutral-700);
+    --indicator-border: var(--color-neutral-600);
+}
+
+.theme-switch-indicator {
+    grid-column-start: 1;
+}
+
+.theme-switch[aria-checked='true'] .theme-switch-indicator {
+    grid-column-start: 2;
+}
+
+@media (hover: hover) {
+    .theme-switch:hover :is(.theme-switch-sun, .theme-switch-moon) {
+        color: var(--foreground);
+    }
+}

@@ -130,12 +130,9 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
-    * {
-        @apply border-border outline-ring/50;
-    }
-
     body {
-        @apply bg-background text-foreground;
+        background-color: var(--background);
+        color: var(--foreground);
     }
 }
 
@@ -206,13 +203,13 @@
     --chart-3: var(--color-success-500);
     --chart-4: var(--color-warning-500);
     --chart-5: var(--color-info-500);
-    --radius: var(--radius-md);
+    --radius: 0.625rem;
     --sidebar: var(--color-white);
     --sidebar-foreground: var(--color-neutral-900);
     --sidebar-primary: var(--color-primary-500);
     --sidebar-primary-foreground: var(--color-white);
-    --sidebar-accent: var(--color-secondary-100);
-    --sidebar-accent-foreground: var(--color-secondary-800);
+    --sidebar-accent: var(--color-primary-50);
+    --sidebar-accent-foreground: var(--color-primary-800);
     --sidebar-border: var(--color-neutral-200);
     --sidebar-ring: var(--color-primary-400);
 }
@@ -245,8 +242,8 @@
     --sidebar-foreground: var(--color-neutral-50);
     --sidebar-primary: var(--color-primary-400);
     --sidebar-primary-foreground: var(--color-neutral-900);
-    --sidebar-accent: var(--color-secondary-800);
-    --sidebar-accent-foreground: var(--color-secondary-100);
+    --sidebar-accent: var(--color-primary-900);
+    --sidebar-accent-foreground: var(--color-primary-100);
     --sidebar-border: var(--color-neutral-700);
     --sidebar-ring: var(--color-primary-400);
 }

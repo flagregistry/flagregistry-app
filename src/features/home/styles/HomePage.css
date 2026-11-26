@@ -1,0 +1,33 @@
+.home {
+    margin-inline: auto;
+    display: grid;
+    max-width: 100rem;
+    gap: 1.25rem;
+}
+
+.home-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.home-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -.025em;
+}
+
+@media (width < 48rem) {
+    .home-intro {
+        flex-direction: column;
+    }
+
+    .home-title {
+        font-size: clamp(1.5rem, 6vw, 1.875rem);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+}

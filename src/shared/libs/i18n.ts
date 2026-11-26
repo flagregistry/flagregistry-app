@@ -9,7 +9,7 @@ export default void i18n
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
-        supportedLngs: ['en', 'fr'],
+        supportedLngs: ['en'],
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json',
         },
